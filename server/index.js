@@ -1,11 +1,15 @@
 /** Express + Socket.IO server */
 
-const express = require('express');
-const { createServer } = require('http');
-const { Server } = require('socket.io');
-const path = require('path');
-const { createRoom, joinRoom, leaveRoom, findRoom, getRoomCount } = require('./roomManager');
-const { ServerGameLoop } = require('./gameLoop');
+import express from 'express';
+import { createServer } from 'http';
+import { Server } from 'socket.io';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createRoom, joinRoom, leaveRoom, findRoom, getRoomCount } from './roomManager.js';
+import { ServerGameLoop } from './gameLoop.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const httpServer = createServer(app);

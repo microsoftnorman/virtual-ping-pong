@@ -1,3 +1,10 @@
 node_modules/
 dist/
 .env
+.deploy-stage/
+deploy.zip
+applogs*/
+*.zip
+cmd-body.json
+cmd2.json
+docker-logs.txt

@@ -1,6 +1,6 @@
 /** Room Manager — handles room creation, joining, and state */
 
-const crypto = require('crypto');
+import crypto from 'crypto';
 
 /** @type {Map<string, Room>} */
 const rooms = new Map();
@@ -128,7 +128,7 @@ const findRoom = (socketId) => {
 /** Get room count (for monitoring) */
 const getRoomCount = () => rooms.size;
 
-module.exports = {
+export {
   createRoom,
   joinRoom,
   leaveRoom,

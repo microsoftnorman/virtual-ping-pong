@@ -201,4 +201,4 @@ class ServerGameLoop {
   }
 }
 
-module.exports = { ServerGameLoop };
+export { ServerGameLoop };

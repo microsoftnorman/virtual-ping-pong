@@ -1,0 +1,16 @@
+name: virtual-ping-pong
+metadata:
+  template: virtual-ping-pong
+services:
+  web:
+    project: .
+    language: js
+    host: appservice
+    hooks:
+      prepackage:
+        windows:
+          shell: pwsh
+          run: npm run build
+        posix:
+          shell: sh
+          run: npm run build
